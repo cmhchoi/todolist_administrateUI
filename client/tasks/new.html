@@ -1,0 +1,28 @@
+<div id='container'>
+  <div class="flash" ng-hide="hideAdd">
+    {{added}}
+  </div>
+  <header class="header">
+    <h1 class="header__heading">
+      New Task
+    </h1>
+    <div class="header__actions">
+      <a class="button btn btn-default" href="#/">Back</a>
+    </div>
+  </header>
+</div>
+<form id="todo-form" ng-submit="addTodo()" class="ng-valid ng-dirty ng-submitted ng-valid-parse">
+  <div class="field-unit">
+    <div class="label">
+      <label>Task</label>
+    </div>
+    <div class="field">
+      <input id="new-todo" ng-model="newTodo" ng-disabled="saving" autofocus="" class="ng-valid ng-touched ng-dirty ng-valid-parse" autocomplete="off">
+    </div>
+  </div>
+  <div class="form-action">
+    <button class="btn btn-default" type="submit">
+      Create Task
+    </button>
+  </div>
+</form>

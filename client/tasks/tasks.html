@@ -1,0 +1,47 @@
+<div id='container'>
+  <form class="search">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input class="search__input" type='text' ng-model='search' placeholder='Search' />
+  </form>
+  <header class="header">
+    <h1 class="header__heading">
+      Tasks
+    </h1>
+    <div class="header__actions">
+      <a class="button btn btn-default" href="#/new">New task</a>
+    </div>
+  </header>
+</div>
+<table class="collection-data" aria-labelledby="page-title">
+  <thead>
+    <tr class="table__role">
+      <th class="cell-label cell-label--date-time
+          cell-label--false
+        " scope="col">
+        <a>Created At</a>
+      </th>
+      <th class="cell-label cell-label--task
+          cell-label--false
+        " scope="col">
+        <a ng-click="sortBy('title')">
+          Task
+          <i class="fa fa-sort" aria-hidden="true"></i>
+          <span class="sortorder" ng-show="propertyName === 'title'" ng-class="{reverse: reverse}"></span>
+        </a>
+      </th>
+      <th colspan="2" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table__row" role="link" tabindex="0" ng-repeat="todo in todos | filter:search | orderBy:propertyName:reverse">
+      <td class="cell-data cell-data--date-time">{{todo.date}}</td>
+      <td class="cell-data cell-data--task">{{todo.title}}</td>
+      <td>
+        <a class="button edit" ng-href="#/edit/{{todo.$$hashKey}}">Edit</a>
+      </td>
+      <td>
+        <a class="button destroy" ng-click="removeTodo(todo)">Destroy</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

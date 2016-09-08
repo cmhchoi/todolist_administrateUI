@@ -1,0 +1,30 @@
+<div id='container'>
+  <div class="flash" ng-hide="hideEdit">
+    {{edited}}
+  </div>
+  <header class="header">
+    <h1 class="header__heading">
+      Edit Task
+    </h1>
+    <div class="header__actions">
+      <a class="button btn btn-default" href="#/">Back</a>
+    </div>
+  </header>
+</div>
+<div ng-init="getTodo()">
+  <form ng-submit="saveEdits(todo, 'submit')">
+    <div class="field-unit">
+      <div class="label">
+        <label>Task</label>
+      </div>
+      <div class="field">
+        <input class="edit" ng-model="todo.title" ng-value="todo.title">
+      </div>
+    </div>
+    <div class="form-action">
+      <button class="btn btn-default" type="submit">
+        Edit Task
+      </button>
+    </div>
+  </form>
+<div>
