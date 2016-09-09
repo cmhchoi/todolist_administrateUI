@@ -1,7 +1,8 @@
 {
-  "name": "todo_angular",
+  "name": "todo",
   "version": "1.0.0",
   "description": "",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
@@ -11,6 +12,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmhchoi/todolist_administrateUI.git"
+  },
+  "keywords": [],
   "author": "Chris Choi",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmhchoi/todolist_administrateUI/issues"
+  },
+  "homepage": "https://github.com/cmhchoi/todolist_administrateUI#readme"
 }
