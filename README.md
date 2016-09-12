@@ -1,6 +1,6 @@
 ##To start on localhost:3000
 
-docker-compose up
+$ docker-compose up
 
 ##Deployed link
 
