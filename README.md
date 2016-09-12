@@ -1,6 +1,10 @@
-##To start on localhost:3000
+##To start on localhost:3000 with Docker
 
 $ docker-compose up
+
+##To start on localhost:3000 without Docker
+
+$ node server.js
 
 ##Deployed link
 
